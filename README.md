@@ -1,7 +1,29 @@
-# Facebook
+# Facebook Clone in Angular 15+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.3.
 
+## App Routing.
+- Due to the huge size of the application, we'll enable app routing and enable lazy loading.
+
+```typescript
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  {
+    path: '',
+    loadChildren: () => import('./components/home/home.module').then(m => m.HomeModule)
+  },
+
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+
+```
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
