@@ -1,3 +1,4 @@
+import { NgForm } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -10,6 +11,13 @@ export class LoginComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  login(form: NgForm): void{
+    
+  }
+  openRegister(): void{
+    // this.router.navigate(['/register']);
   }
 
 }
