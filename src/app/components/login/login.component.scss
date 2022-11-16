@@ -49,29 +49,30 @@
             border-radius: 10px;
             margin-bottom: 30px;
 
-            &__content{
+            &__content {
                 padding: 5px;
                 display: flex;
                 flex-direction: column;
-                
-                .login-form{
+
+                .login-form {
                     display: flex;
                     flex-direction: column;
                     gap: 10px;
 
-                    input{
+                    input {
                         padding: 20px;
                         outline: none;
                         border: 1px solid lightgray;
                         border-radius: 9px;
                         line-height: 14px;
 
-                        &::placeholder{
+                        &::placeholder {
                             font-weight: normal;
                             font-size: 16px;
                         }
                     }
-                    .login-button{
+
+                    .login-button {
                         background-color: $primary-button-color;
                         padding: 15px;
                         outline: none;
@@ -81,11 +82,51 @@
                         font-size: 16px;
                         font-weight: bold;
                         line-height: 16px;
-                        margin-bottom: 20px;
+                        margin-bottom: 16px;
                         cursor: pointer;
                     }
                 }
+
+
+                // Login form ends
+                a {
+                    text-decoration: none;
+                    color: $primary-button-color;
+                    text-align: center;
+                    border-bottom: 1px solid lightgray;
+                    margin-bottom: 16px;
+                    padding-bottom: 16px;
+                    cursor: pointer;
+                }
+
+                .create-account{
+                    background-color: $success-button-color;
+                    display: inline-block;
+                    align-self: center;
+                    border: none;
+                    border-radius: 9px;
+                    color: white;
+                    padding: 15px 30px;
+                    font-size: 18px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    margin-top: 8px;
+                }
             }
+        } //Card ends here.
+        .tagline{
+            text-align: center;
+            // letter-spacing: 0.7px;
         }
     }
+} // End of header
+
+.login__footer{
+    height: 30vh;
+    align-self: flex-end;
+    width: 100%;
+    background-color: #ffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
