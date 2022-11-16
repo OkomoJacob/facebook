@@ -1,3 +1,4 @@
+import { HomeComponent } from './components/home/home.component';
 import { FacebookGuard } from './guards/facebook.guard';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -7,6 +8,7 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./components/home/home.module').then(m => m.HomeModule),
+    component: HomeComponent,
     canActivate: [FacebookGuard]
   },
   {
