@@ -6,15 +6,21 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Due to the huge size of the application, we'll enable app routing and enable lazy loading.
 
 ```typescript
+import { FacebookGuard } from './guards/facebook.guard';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./components/home/home.module').then(m => m.HomeModule)
+    loadChildren: () => import('./components/home/home.module').then(m => m.HomeModule),
+    canActivate: [FacebookGuard]
   },
-
+  {
+    path: 'login',
+    component: LoginComponent,
+  }
 ];
 
 @NgModule({
@@ -23,7 +29,30 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
+
 ```
+
+## App Guarding
+- Occassionally you'll need to secure certain pages, Only authenticatecd users can access them.
+- Set up project guards as below. set up `canActivate` as the implementation interface.
+
+```typescript
+import { Injectable } from '@angular/core';
+import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree } from '@angular/router';
+import { Observable } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ProjectGuard implements CanActivate {
+  canActivate(
+    route: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+    return true;
+  }
+}
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
