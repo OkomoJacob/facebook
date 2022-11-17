@@ -79,4 +79,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Resources
 1. [Material Icons Archive](https://www.angularjswiki.com/angular/angular-material-icons-list-mat-icon-list/)
-2. 
+2. [Angular Guards & canActivate](https://angular.io/api/router/CanActivate)
