@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.3.
 
 ## App Routing.
-- Due to the huge size of the application, we'll enable app routing and enable lazy loading.
+- Due to the huge size of the application, we'll enable app routing and enable [lazy loading](https://www.freecodecamp.org/news/lazy-loading-in-angular-intro-to-ngmodules/).
 
 ```typescript
 import { FacebookGuard } from './guards/facebook.guard';
@@ -33,7 +33,7 @@ export class AppRoutingModule { }
 ```
 
 ## App Guarding
-- Occassionally you'll need to secure certain pages, Only authenticatecd users can access them.
+- Occassionally you'll need to secure certain pages. Only then, authenticatecd users can access them.
 - Set up project guards as below. set up `canActivate` as the implementation interface.
 
 ```typescript
@@ -76,3 +76,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Resources
+1. [Material Icons Archive](https://www.angularjswiki.com/angular/angular-material-icons-list-mat-icon-list/)
+2. 
