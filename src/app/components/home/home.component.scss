@@ -40,6 +40,7 @@
                 background-color: #F0F2F5;
                 padding: 10px 100px;
                 border-radius: 20px;
+                display: flex;
 
                 &::placeholder {
                     // padding-left: 0px;
@@ -254,7 +255,7 @@
 
                 img.bg {
                     max-width: 100%;
-                    object-fit: cover;
+                    object-fit: cover; // Fill container fully, without overstretch
                     height: 100%;
                     position: absolute;
                     top: 0;
