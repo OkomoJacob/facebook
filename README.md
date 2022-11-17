@@ -52,6 +52,61 @@ export class ProjectGuard implements CanActivate {
   }
 }
 ```
+### Connecting App to Firebase
+- Features like `firebaseAuth`, `firebaseHosting` are just afew of the cserverless candies that Firebase offers the developer and helps save time.
+- [x] Install the Angular firebase firestore package into youtr project as below.
+ ```bash
+ng add @angular/fire
+ ```
+
+ ```typescript
+import {AngularFireModule} from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore/'; 
+import {AngularFireAuthModule } from '@angular/fire/compat/auth';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    // HomeComponent,
+    LoginComponent,
+    RegisterComponent
+  ],
+  imports: [
+AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule,
+    AngularFireAuthModule,
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { 
+
+}
+ ```
+
+ - [x] As well, add the following firebase cofigs from your dfirebase console into your app `environment.ts` and `environment.prod.ts` as below:
+ 
+ ```typescript
+
+export const environment = {
+  production: true,
+  // Your web app's Firebase configuration
+  firebaseConfig: {
+    apiKey: 'AIzaSyD9Y3bz_a....pvzNyTj9Y1N-FlTno8',
+    authDomain: "facebook-....firebaseapp.com",
+    projectId: "facebook-...",
+    storageBucket: "facebook-....appspot.com",
+    messagingSenderId: '89307...4722',
+    appId: '1:...830716...:web:dea...0f44e0b5c58d9b'
+  }
+};
+
+ ```
+ - As well import the environmwent files into your `app.modules.ts` as below:
+
+ ```typescript
+ import { environment } from './../environments/environment';
+ ```
 
 ## Development server
 
