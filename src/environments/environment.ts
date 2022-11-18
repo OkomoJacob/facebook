@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   // Your web app's Firebase configuration
-  firebaseConfig: {
+  firebaseConofig: {
     apiKey: 'AIzaSyD9Y3bz_aRsBQMpXpvzNyTj9Y1N-FlTno8',
     authDomain: "facebook-e26d3.firebaseapp.com",
     projectId: "facebook-e26d3",
