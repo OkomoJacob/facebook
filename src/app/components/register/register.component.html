@@ -1,4 +1,4 @@
-<section class="register">
+<mat-card class="register">
     <div class="header">
         <h3>Sign Up</h3>
         <p>It's quick and easy.</p>
@@ -9,10 +9,17 @@
                 <input type="text" name="fname" placeholder="First name" ngModel>
                 <input type="text" name="surname" placeholder="Surname" ngModel>
             </div>
-            <div class="email_password">
-                <input type="text" name="email" placeholder="Email" ngModel>
-                <input type="text" name="avator" placeholder="Image Url" ngModel>
+            <div class="email_phone">
+                <input type="text" name="email" placeholder="Email or Phone" ngModel>
+            </div>
+            <div class="password">
                 <input type="password" name="password" placeholder="New password" ngModel>
+                <input type="password" name="password" placeholder="Confirm password" ngModel>
+            </div>
+            <div class="date_of_birth">
+                <input type="text" name="dd" placeholder="12" ngModel>
+                <input type="text" name="mm" placeholder="Nov" ngModel>
+                <input type="input" name="year" placeholder="2022" ngModel>
             </div>
             <p>People who use our service may have uploaded your contact information to Facebook. Learn more.</p>
             <p>By clicking Sign Up, you agree to our Terms, Privacy Policy and Cookies Policy. You may receive SMS
@@ -20,4 +27,4 @@
             <button type="submit" class="submit-button" [mat-dialog-close]="form.value">Sign Up</button>
         </form>
     </div>
-</section>
+</mat-card>
